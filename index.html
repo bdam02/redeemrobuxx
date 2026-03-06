@@ -3,8 +3,7 @@
 <head>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Free Robux</title>
+<title>Redeem Code</title>
 
 <style>
 
@@ -23,49 +22,55 @@ color:white;
 background:#111827;
 padding:50px;
 border-radius:20px;
-box-shadow:0 20px 60px rgba(0,0,0,0.5);
+box-shadow:0 20px 60px rgba(0,0,0,0.6);
 text-align:center;
 width:90%;
 max-width:500px;
 }
 
 .logo{
-width:120px;
+font-size:40px;
+font-weight:bold;
+color:#22c55e;
 margin-bottom:20px;
 }
 
-h1{
-font-size:36px;
-margin-bottom:30px;
+input{
+width:100%;
+padding:14px;
+border-radius:10px;
+border:none;
+margin-top:20px;
+font-size:16px;
 }
 
 button{
+margin-top:20px;
 background:#22c55e;
 border:none;
-padding:16px 40px;
-font-size:20px;
-border-radius:12px;
+padding:14px 30px;
+font-size:18px;
+border-radius:10px;
 cursor:pointer;
 color:white;
 transition:0.2s;
 }
 
 button:hover{
-transform:scale(1.05);
 background:#16a34a;
+transform:scale(1.05);
 }
 
 #loading{
 display:none;
-margin-top:25px;
-font-size:18px;
+margin-top:20px;
 color:#cbd5f5;
 }
 
 #error{
-margin-top:25px;
-font-size:20px;
+margin-top:20px;
 color:#ff4d4d;
+font-size:18px;
 }
 
 </style>
@@ -76,13 +81,15 @@ color:#ff4d4d;
 
 <div class="card">
 
-<img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Robux_2019_Logo.png">
+<div class="logo">ROBUX</div>
 
-<h1>FREE ROBUX</h1>
+<h2>Redeem Your Code</h2>
 
-<button onclick="redeem()">REDEEM</button>
+<input id="code" placeholder="Enter your code">
 
-<div id="loading">Connecting to servers...</div>
+<button onclick="redeem()">Redeem</button>
+
+<div id="loading">Checking code...</div>
 <div id="error"></div>
 
 </div>
@@ -98,7 +105,7 @@ setTimeout(function(){
 
 document.getElementById("loading").style.display="none";
 document.getElementById("error").innerText =
-"❌ Error: Free Robux generators do not exist.";
+"❌ Error: This code is invalid.";
 
 },3000);
 
