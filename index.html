@@ -4,64 +4,68 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Robux Claim</title>
+<title>Free Robux</title>
 
 <style>
 
 body{
-background:#111827;
-color:white;
-font-family:Arial, sans-serif;
-text-align:center;
 margin:0;
-padding:20px;
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background:linear-gradient(135deg,#0f172a,#1e293b);
+font-family:Arial, sans-serif;
+color:white;
 }
 
-.container{
+.card{
+background:#111827;
+padding:50px;
+border-radius:20px;
+box-shadow:0 20px 60px rgba(0,0,0,0.5);
+text-align:center;
+width:90%;
 max-width:500px;
-margin:auto;
 }
 
-img{
-width:50%;
-max-width:200px;
+.logo{
+width:120px;
+margin-bottom:20px;
+}
+
+h1{
+font-size:36px;
+margin-bottom:30px;
 }
 
 button{
-padding:15px 30px;
-font-size:20px;
 background:#22c55e;
 border:none;
-border-radius:10px;
-color:white;
+padding:16px 40px;
+font-size:20px;
+border-radius:12px;
 cursor:pointer;
-width:100%;
-max-width:250px;
+color:white;
+transition:0.2s;
+}
+
+button:hover{
+transform:scale(1.05);
+background:#16a34a;
 }
 
 #loading{
 display:none;
-margin-top:20px;
+margin-top:25px;
 font-size:18px;
+color:#cbd5f5;
 }
 
 #error{
-color:#ff4d4d;
-margin-top:20px;
+margin-top:25px;
 font-size:20px;
-}
-
-@media (max-width:600px){
-
-h1{
-font-size:28px;
-}
-
-button{
-font-size:18px;
-padding:14px;
-}
-
+color:#ff4d4d;
 }
 
 </style>
@@ -70,13 +74,11 @@ padding:14px;
 
 <body>
 
-<div class="container">
+<div class="card">
+
+<img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Robux_2019_Logo.png">
 
 <h1>FREE ROBUX</h1>
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Robux_2019_Logo.png">
-
-<br><br>
 
 <button onclick="redeem()">REDEEM</button>
 
@@ -90,6 +92,7 @@ padding:14px;
 function redeem(){
 
 document.getElementById("loading").style.display="block";
+document.getElementById("error").innerText="";
 
 setTimeout(function(){
 
