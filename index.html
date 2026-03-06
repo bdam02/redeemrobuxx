@@ -3,7 +3,7 @@
 <head>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Redeem Code</title>
+<title>Code Redeem</title>
 
 <style>
 
@@ -19,19 +19,20 @@ color:white;
 }
 
 .card{
-background:#111827;
+background:rgba(17,24,39,0.9);
 padding:50px;
 border-radius:20px;
-box-shadow:0 20px 60px rgba(0,0,0,0.6);
+box-shadow:0 0 40px rgba(0,0,0,0.7);
 text-align:center;
 width:90%;
 max-width:500px;
 }
 
 .logo{
-font-size:40px;
+font-size:42px;
 font-weight:bold;
 color:#22c55e;
+text-shadow:0 0 15px #22c55e;
 margin-bottom:20px;
 }
 
@@ -54,11 +55,12 @@ border-radius:10px;
 cursor:pointer;
 color:white;
 transition:0.2s;
+box-shadow:0 0 15px #22c55e;
 }
 
 button:hover{
-background:#16a34a;
 transform:scale(1.05);
+box-shadow:0 0 30px #22c55e;
 }
 
 #loading{
@@ -71,6 +73,12 @@ color:#cbd5f5;
 margin-top:20px;
 color:#ff4d4d;
 font-size:18px;
+}
+
+.note{
+margin-top:25px;
+font-size:12px;
+color:#9ca3af;
 }
 
 </style>
@@ -91,6 +99,8 @@ font-size:18px;
 
 <div id="loading">Checking code...</div>
 <div id="error"></div>
+
+<div class="note">This page is a harmless prank.</div>
 
 </div>
 
