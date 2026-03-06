@@ -1,1 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Robux Claim</title>
+
+<style>
+
+body{
+background:#111827;
+color:white;
+font-family:Arial, sans-serif;
+text-align:center;
+margin:0;
+padding:20px;
+}
+
+.container{
+max-width:500px;
+margin:auto;
+}
+
+img{
+width:50%;
+max-width:200px;
+}
+
+button{
+padding:15px 30px;
+font-size:20px;
+background:#22c55e;
+border:none;
+border-radius:10px;
+color:white;
+cursor:pointer;
+width:100%;
+max-width:250px;
+}
+
+#loading{
+display:none;
+margin-top:20px;
+font-size:18px;
+}
+
+#error{
+color:#ff4d4d;
+margin-top:20px;
+font-size:20px;
+}
+
+@media (max-width:600px){
+
+h1{
+font-size:28px;
+}
+
+button{
+font-size:18px;
+padding:14px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>FREE ROBUX</h1>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Robux_2019_Logo.png">
+
+<br><br>
+
+<button onclick="redeem()">REDEEM</button>
+
+<div id="loading">Connecting to servers...</div>
+<div id="error"></div>
+
+</div>
+
+<script>
+
+function redeem(){
+
+document.getElementById("loading").style.display="block";
+
+setTimeout(function(){
+
+document.getElementById("loading").style.display="none";
+document.getElementById("error").innerText =
+"❌ Error: Free Robux generators do not exist.";
+
+},3000);
+
+}
+
+</script>
+
+</body>
+</html>
